@@ -128,6 +128,12 @@ class S{
                 this.current = 0;
             }
             this.drawImage(this.current);
+        } else if (loop === 'none') {
+            this.current += this.pongSign;
+            if (this.current >= this.images.length-1) {
+                this.current = this.images.length-1;
+            }
+            this.drawImage(this.current);
         } else {
             this.drawImage(++this.current % this.images.length); //loop
         }
